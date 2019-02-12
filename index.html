@@ -25,49 +25,46 @@ function setup(){
     var snakelength = 20;
     
     
+    function input(){
+while (1==1){
+        document.onkeydown = checkKey;
+}
+function checkKey(e) {
+
+    e = e || window.event;
+    
+    if(e.keycode == 38) {
+    
+     direction = up;
+     
+     };
+     
+     if(e.keycode ==40) { 
+     
+     direction = down;
+     
+     };
+     
+     
+    if(e.keycode == 37) {
+   
+    direction = left;
+     
+     };
+     
+    if(e.keycode == 39) {
+    
+    direction = right;
+    
+    };
+   
+}
+    }
+    
+    
     
        
-    
-   function draw(){
-    nextX =snakeX;
-    nextY=snakeY;
-    background(0);
-    var foodX
-    var foodY
-    
-    
-   
-    while(alive == true){
-     translate(nextX,nextY) 
-    rect(snakeX,snakeY, snakeX + snakeLength, snakeY + 20);
-    if (direction == "right"){
-    nextX = snakeX + 10;
-    }
-    
-    if (direction == "left"){
-    nextY = snakeX - 10;
-   
-    }
-    
-    if (direction == "up"){
-    nextY = snakeY + 10;
-    
-    }
-    
-    if (direction == "down"){
-    
-    nextY = snakeY - 10;
-    
-    }
-    if (foodCollected == true){
- foodX = rand(constrain(canvas.width - 20)
- foodY = rand(constrain(canvas.height - 20)
-    rect(foodX, foodY, foodX + 10, foodY +10)
-    }
-    
-    
-    }
-    }
+ 
     
     </script>
 </body>
