@@ -18,12 +18,12 @@ function setup(){
        
        
        
-    var snakeX = 20;
-    var snakeY = 20;
+    var snakeX = 10;
+    var snakeY = 10;
     var nextX;
     var nextY;
     var direction = "right";
-    var snakelength = 50;
+    var snakelength = 10;
     
     function move(){
 
@@ -77,20 +77,20 @@ function checkKey(e) {
     
    stroke(255)
      fill(255)
-    rect(snakeX,snakeY, snakeX + snakeLength, snakeY + 50);
+    rect(snakeX,snakeY, snakeX + snakeLength, snakeY + 10);
     while(alive == true){
      if(direction==up){
-         snakeY = snakeY + 25
+         snakeY = snakeY + 5
      }
     if(direction==down){
-     snakeY = snakeY - 25   
+     snakeY = snakeY - 5   
     }
    if(direction==right){
-       snakeX = snakeX + 25
+       snakeX = snakeX + 5
    }
     
 if(direction==left){
-snakeX = snakeX - 25
+snakeX = snakeX - 5
 }        
    }
     }
