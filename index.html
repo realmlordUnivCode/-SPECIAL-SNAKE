@@ -11,7 +11,7 @@ var snakeY2 = 20;
     var direction = right;
     var alive = true;
     var length = 2
-while (alive == true){
+
 if(direction==up)
     snakeY = snakeY + 10
     snakeY2 = snakeY - length
@@ -44,7 +44,7 @@ if(direction==right) {
      
  }
     
-}
+
 
  
     
@@ -64,14 +64,14 @@ rect(snakeX,snakeY,snakeX2,snakeY2);
 
 function move(){
     
-while (alive == true){
-if(direction==up)
+
+if(direction=="up")
     snakeY = snakeY + 10
     snakeY2 = snakeY - length
     
     
 } 
-    if(direction==down){
+    if(direction=="down"){
         
         snakeY = snakeY + 10
         
@@ -79,7 +79,7 @@ if(direction==up)
         
     
 }
-if(direction==right) {
+if(direction=="right") {
  snakeX= snakeX -10
     
     snakeX2 = snakeX - length
@@ -87,7 +87,7 @@ if(direction==right) {
     
 }
 
- if(direction==left){
+ if(direction=="left"){
   
      snakeX = snakeX + 10 
      snakeX2 = snakeX + length
