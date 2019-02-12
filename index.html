@@ -25,9 +25,7 @@ function setup(){
     var direction = "right";
     var snakelength = 10;
     
-    function move(){
-
-    }
+ 
     function input(){
 while (1==1){
         document.onkeydown = checkKey;
@@ -65,19 +63,28 @@ function checkKey(e) {
     }
     
     
+     var foodX
+    var foodY 
     
+    function food(){
+foodX = rand(constrain(canvas.width))
+        foodY = rand(constrain(canvas.height))
+    }
           
    function draw(){
 
   
-     background(0);
-    var foodX
-    var foodY 
-    var snakeHeight = 10
+       
+    var snakeHeight = 10 
     
-   stroke(color(255,255,255))
+    background(0);
+    stroke(color(255,255,255))
      fill(color(255,0,0))
     rect(snakeX,snakeY,snakeLength,snakeHeight);
+    rect(foodx   
+   
+    
+   
     while(alive == true){
      if(direction==up){
          snakeY = snakeY + 5
