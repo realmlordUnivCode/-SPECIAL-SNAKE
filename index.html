@@ -12,17 +12,61 @@ createCanvas(window.innerWidth,window.innerHeight)
 function draw(){
 var snakeX = 0;
 var snakeY = 0;
-var snakeX2 = 10;
-var snakeY2 = 10;
-
+var snakeX2 = 20;
+var snakeY2 = 20;
+    var direction = right;
+    var alive = true;
+    var length = 20
+    
 background(0);
 stroke(255);
 fill(255);
 rect(snakeX,snakeY,snakeX2,snakeY2);
 
+function move(){
+    
+while (alive == true){
+if(direction==up)
+    snakeY = snakeY + 10
+    snakeY2 = snakeY - length
+    
+    
+} 
+    if(direction==down){
+        
+        snakeY = snakeY + 10
+        
+        snakeY2 = snakeY - length
+        
+    
+}
+if(direction==right) {
+ snakeX= snakeX -10
+    
+    snakeX2 = snakeX - length
+    
+    
+}
 
-
-
+ if(direction==left){
+  
+     snakeX = snakeX + 10 
+     snakeX2 = snakeX + length
+     
+     
+     
+     
+ }
+    
+}
+function input(){
+ 
+    
+    
+    
+    
+    
+}
 }
 </script>
 
