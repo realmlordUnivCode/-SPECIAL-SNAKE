@@ -9,7 +9,8 @@
    <script>
        var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
-
+canvas.setAttribute('width', window.innerWidth)
+       canvas.setAttribute('height', window.innerHeight
 ctx.fillstyle = "black";
 ctx.fillrect(0,0,canvas.width,canvas.height);
 var alive = false
