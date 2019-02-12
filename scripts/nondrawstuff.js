@@ -40,6 +40,6 @@ if(direction==right) {
  }
     
 }
-function input(){
+
  
     
