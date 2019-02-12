@@ -1,5 +1,8 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+
+ctx.fillstyle = "black";
+ctx.fillrect(0,0,canvas.width,canvas.height);
 var alive = false
 var snakeX = 20
 var snakeY = 20
