@@ -32,24 +32,28 @@ function move() {
   /* Move this inside the brackets of move() */
   if (direction == "up") {
     snakeY = snakeY + 10
+      wait(1)
     snakeY2 = snakeY + length
   }
   
   if (direction == "down") {
 
     snakeY = snakeY - 10
-    snakeY2 = length - 10
+wait(1)
+      snakeY2 = snakeY - length
   }
   
   if (direction == "right") {
     snakeX = snakeX + 10
-    snakeX2 = length + 10
+    wait(1)
+      snakeX2 = length + 10
   }
 
   if (direction == "left") {
 
     snakeX = snakeX - 10
-    snakeX2 = snakeX - length
+    wait(1)
+      snakeX2 = snakeX - length
   }
 }
     </script>
