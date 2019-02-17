@@ -33,23 +33,27 @@ function move() {
   if (direction == "up") {
     snakeY = snakeY + 10
     snakeY2 = length
+      snakeX2 = 20
   }
   
   if (direction == "down") {
 
     snakeY = snakeY - 10
     snakeY2 = length
+  snakeX2 = 20
   }
   
   if (direction == "right") {
     snakeX = snakeX + 10
     snakeX2 = length
+  snakeY2 = 20
   }
 
   if (direction == "left") {
 
     snakeX = snakeX - 10
     snakeX2 = length
+  snakeY2 = 20
   }
 }
     </script>
