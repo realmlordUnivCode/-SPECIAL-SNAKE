@@ -75,12 +75,12 @@
             frameRate(10);
         }
         function draw() {
-             move()
+           
             background(0);
             stroke(255);
             fill(255);
             rect(snakeX, snakeY, snakeX2, snakeY2);
-           
+             move()
             if (foodCollected == true){
                foodX = random(0, canvas.width - 10)
          foodY = random(0, canvas.height - 10)
@@ -111,7 +111,7 @@
              } 
           
             /* Ensure move() is called for each draw() */
-            move()
+          
    
         }
         
