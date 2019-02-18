@@ -24,6 +24,7 @@ function draw() {
   input()
   /* Ensure move() is called for each draw() */
   move()
+      document.onkeydown = checkKey;
 }
 
 
@@ -66,10 +67,10 @@ function move() {
 } 
         
     }
-    while (1==1){
+
         
-    document.onkeydown = checkKey;
-    }
+  
+   
     function checkKey(e) {
 
     e = e || window.event;
