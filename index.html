@@ -87,8 +87,8 @@
             rect(foodX,foodY,10, 10)
              let distanceX = dist(foodX,snakeX)
              let distanceY = dist(foodY,snakeY)
-             if (distanceX <= 20){
-                 if (distanceY <= 20){
+             if (dist(foodX,snakeX) <= 20){
+                 if (dist(foodY,snakeY <= 20){
                      foodCollected = true
                      length += 20
                  }
