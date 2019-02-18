@@ -12,21 +12,113 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
 
 <script>
-  
+        var snakeX = 0
+        var snakeY = 0
+        var snakeSeg2X = 0
+        var snakeSeg2Y = 0
+        var seg2XMovement= 0
+        var seg2YMovement= 0
+        var seg2Length = 0
+        var direction = "right"
+        var length = 20
+   function move() {
+            /* Move this inside the brackets of move() */
+            if (direction == "up") {
+                snakeY = snakeY - 10
+                snakeY2 = length
+                snakeX2 = 20
+            }
+            if (direction == "down") {
+                snakeY = snakeY + 10
+                snakeY2 = length
+                snakeX2 = 20
+            }
+            if (direction == "right") {
+                snakeX = snakeX + 10
+                snakeX2 = length
+                snakeY2 = 20
+            }
+            if (direction == "left") {
+                snakeX = snakeX - 10
+                snakeX2 = length
+                snakeY2 = 20
+            }
+        }
+        function keyPressed() {
+            if (keyCode == DOWN_ARROW) {
+                if(direction != "down"){
+                 turn()       
+                }
+                
+            }
+            if (keyCode == UP_ARROW) {
+                if (direction != "up"){
+                 turn()       
+                }
+            }
+            if (keyCode == RIGHT_ARROW) {
+                if (direction != "right"){
+                        turn()
+                }
+            }
+            if (keyCode == LEFT_ARROW) {
+                if(direction != "left"){
+                 turn()       
+                }
+            }
+        }
+        function snake(){
+          snakeX += snakeYMove
+          snakeY += snakeXMove
+        snakeYHeight += yMovement
+        snakeXLength += xMovement
+       seg2Length =+ seg2Shrink
+       seg2Height =+seg2VertShrink  
+                rect(snakeX
+                rect(seg2X,seg2Y,seg2Length,seg2Height)
+                
+        }
   function setup(){
     createCanvas(window.innerWidth,window.innerHeight)
     background(0)
   }
-  var segments = 1
-  var snakeY = 0
-  var snakeX = 0
-  var length = 20
+
   function turn(){
    if(direction == "right"){
-     
+   seg2Length = length - 20
+           for(length/10-2){
+            seg2shrink = -10
+            seg2shrinkvert = 0
+                   seg2X = snakeX
+                   seg2Y = snakeY
+                   
+    }
+           
+   }
     
    }
   }
+  
+  function move(){
+   
+   if (direction == "right"){
+           snakeXMove = 10
+          
+  }
+   if (direction == "left"){
+           
+    snakeXMove = -10       
+   }
+   if (direction == "up"){
+    snakeYMove = -10
+           
+           
+   }
+   if (direction == "down"){
+           
+    snakeYMove = 10       
+   }
+  }      
  function draw(){
   
     
