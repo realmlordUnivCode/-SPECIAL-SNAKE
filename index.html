@@ -32,29 +32,32 @@ function move() {
 
   /* Move this inside the brackets of move() */
   if (direction == "up") {
+       if ( snakeY < width-10) { 
     snakeY = snakeY + 10
     snakeY2 = length
       snakeX2 = 20
   }
-  
+  }
   if (direction == "down") {
-
+if ( snakeY > 0) { 
     snakeY = snakeY - 10
     snakeY2 = length
   snakeX2 = 20
-  }
+  }}
   
   if (direction == "right") {
-    snakeX = snakeX + 10
+    if ( snakeX < width-10) { 
+      snakeX = snakeX + 10
     snakeX2 = length
   snakeY2 = 20
   }
-
+  }
   if (direction == "left") {
-
+ if ( snakeX > 0) { 
     snakeX = snakeX - 10
     snakeX2 = length
   snakeY2 = 20
+ }
   }
 }
     
@@ -71,34 +74,28 @@ function move() {
         
   
    
-    function checkKey(e) {
-
-    e = e || window.event;
-    
-    if(e.keycode == 38) {
-    
-     direction = "up";
-     
-     };
+    function keyPressed(){
+    if (keyCode == DOWN_ARROW) {
+        if ( snakeY < width-10) { 
+            direction = "down"
+        }
+    }
+    if (keyCode == UP_ARROW) {
+        if ( snakeY > 0) { 
+direction ="up"
+        }
+    }   
+    if (keyCode == RIGHT_ARROW ) {
+        if ( snakeX < height-10) { 
+direction = "right"
+        }
+    }
+    if (keyCode == LEFT_ARROW) {
+        if ( snakeX > 0) { 
+direction = "left"
+        }
+    }
 }
-     if(e.keycode == 40) { 
-     
-     direction = "down"};
-     
-     };
-     
-     
-    if(e.keycode == 37) {
-    
-    direction = "left";
-     
-     };
-     
-    if(e.keycode == 39) {
-    
-    direction = "right";
-    
-    };
     </script>
 
 </body>
