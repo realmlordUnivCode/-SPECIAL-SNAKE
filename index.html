@@ -101,6 +101,7 @@
             rect(foodX,foodY,10, 10)
              fill(255,0,0)
             rect(poisonBerryX,poisonBerryY,10,10)
+              poisonDetect()
              if (dist(foodX,foodY,snakeX,snakeY) <= 20){
                  
                      foodCollected = true
@@ -112,7 +113,7 @@
                  length = 20
              
              } 
-            poisonDetect()
+          
             /* Ensure move() is called for each draw() */
             move()
    
