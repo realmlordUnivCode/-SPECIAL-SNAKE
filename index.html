@@ -75,7 +75,7 @@
             frameRate(10);
         }
         function draw() {
-           
+            poisonDetect()
             background(0);
             stroke(255);
             fill(255);
@@ -96,7 +96,7 @@
             rect(foodX,foodY,10, 10)
              fill(255,0,0)
             rect(poisonBerryX,poisonBerryY,10,10)
-              poisonDetect()
+             
              if (dist(foodX,foodY,snakeX,snakeY) <= 20){
                  
                      foodCollected = true
