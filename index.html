@@ -61,13 +61,12 @@
         var alive = true;
         var length = 20
       var foodCollected = true
-       var poisonBerry2X
-       var poisonBerry2Y
+      
         var foodX
         var foodY
         var poisonBerryX
         var poisonBerryY
-            var poisonFrequency
+           
       
         function PoisonDetect(){
           if(dist(poisonBerryX,poisonBerryY,snakeX,snakeY <=20){
@@ -100,13 +99,7 @@
          foodY = random(0, canvas.height - 10)
        poisonBerryX = random(0,canvas.width - 10)
        poisonBerryY = random(0,canvas.height - 10)         
-            if (frequency = 5){
-               poisonBerryX2 = random(0,canvas.width)
-                poisonBerryY2 = random(0,canvas.height)
-                fill(254)
-                rect(poisonBerryX2,poisonBerryY2,10,10)
-                fill(255)
-            }
+         
                   foodCollected = false
             }
             // input()
@@ -119,14 +112,14 @@
                      length += 20
                  }
            
-             if (length == 100){
-                 alert("you won this level!")
+             if (length == 400){
+                 alert("you won!")
                  length = 20
-                poisonFrequency = 5
+             
              }
             /* Ensure move() is called for each draw() */
             move()
-    
+    poisonDetect()
         }
         
     </script>
