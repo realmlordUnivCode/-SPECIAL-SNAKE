@@ -14,40 +14,85 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
 
     <script>
+        var turn = false
+        var turnSeg1
+     
         function move() {
             /* Move this inside the brackets of move() */
             if (direction == "up") {
-                snakeY = snakeY - 10
+                              if (turn = true){
+                                  if(direction = right){
+                                 var snakeSeg2X = snakeX - 10 
+                                 var snakeSeg2Y = snakeY
+                                 for(length/10 - 1){
+                                      rect(snakeSeg2X,snakeSeg2Y)
+                                      snakeSeg2X += 10
+                                  snakeY -= 10
+                                     snakeY2 = length
+                                 }
+                                     if (direction = left) {
+                                         var snakeSeg2X = snakeX + 10 
+                                 var snakeSeg2Y = snakeY
+                                 for(length/10 - 1){
+                                      rect(snakeSeg2X,snakeSeg2Y)
+                                      snakeSeg2X -= 10
+                                  snakeY -= 10
+                                     snakeY2 = length
+                                     }
+                                  turn = false
+                }
+                else{
+                    snakeY = snakeY - 10
                 snakeY2 = length
                 snakeX2 = 20
-            }
+                    }
+                    }
             if (direction == "down") {
+                                if (turn = true){
+                                    var snakeSeg2X = snakeX
+                }
+                else{
                 snakeY = snakeY + 10
                 snakeY2 = length
                 snakeX2 = 20
             }
+            }
             if (direction == "right") {
-                snakeX = snakeX + 10
+                if (turn = true){
+                }
+             else{   snakeX = snakeX + 10
                 snakeX2 = length
                 snakeY2 = 20
-            }
+
+            }}
             if (direction == "left") {
+                                if (turn = true){
+                }
+                else{
                 snakeX = snakeX - 10
                 snakeX2 = length
                 snakeY2 = 20
             }
         }
+        }
         function keyPressed() {
             if (keyCode == DOWN_ARROW) {
+
+                    turn = true
                 direction = "down"
             }
             if (keyCode == UP_ARROW) {
+                turn = true
                 direction = "up"
+               
             }
             if (keyCode == RIGHT_ARROW) {
+                                turn = true
                 direction = "right"
+
             }
             if (keyCode == LEFT_ARROW) {
+                turn = true
                 direction = "left"
             }
         }
@@ -64,9 +109,10 @@
         var foodY
         var poisonBerryX
         var poisonBerryY
-            
-      
-        
+
+
+      var segments = 1
+        var segmentLength = 20
         
         function setup() {
             createCanvas(window.innerWidth, window.innerHeight)
