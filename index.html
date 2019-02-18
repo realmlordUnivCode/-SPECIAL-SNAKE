@@ -6,18 +6,22 @@
     <script src="localStorageVars.js"> </script>
     <script>
         
-        localStorage.snakeX = 0;
-localStorage.snakeY = 0;
-localStorage.snakeX2 = 20;
-localStorage.snakeY2 = 20;
-localStorage.length = 20;
-    localStorage.direction = "right":
-localStorage.alive = true;
+        localStorage.setItem("snakeX" , 0);
+localStorage.setItem("snakeY", 0);
+localStorage.setItem("snakeX2" , 20);
+localStorage.setItem("snakeY2" , 20);
+localStorage.setItem("length",  20);
+    localStorage.setItem("direction", "right"):
+localStorage.setItem("alive" , "true");
     </script>
 <script>
 
-
-
+var direction = localStorage.getItem("direction")
+var snakeY = localStorage.getItem("snakeY")
+var snakeX = localStorage.getItem("snakeX")
+var snakeX2 = localStorage.getItem("snakeX2")
+var snakeY2 = localStorage.getItem("snakeY2")
+var alive = localStorage.getItem("alive")
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight)
   frameRate(10);
@@ -28,9 +32,9 @@ function draw() {
   background(0);
   stroke(255);
   fill(255);
-  rect(localStorage.snakeX, localStorage.snakeY, localStorage.snakeX2, localStorage.snakeY2);
+  rect(snakeX, snakeY, snakeX2, snakeY2);
   input()
-  /* Ensure move() is called for each draw() */
+
 
      
 }
