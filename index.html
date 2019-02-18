@@ -59,14 +59,14 @@
         var alive = true;
         var length = 20
       var foodCollected = true
-        function foodChange(){
+       
         var foodX
         var foodY
            
             
-        foodCollected = false
+      
         
-        }
+        
         function setup() {
             createCanvas(window.innerWidth, window.innerHeight)
             frameRate(10);
@@ -76,11 +76,13 @@
             stroke(255);
             fill(255);
             rect(snakeX, snakeY, snakeX2, snakeY2);
-            foodChange()
+            if (foodCollected = true){
                foodX = random(0, canvas.width)
          foodY = random(0, canvas.height)
        
             square(foodX,foodY,10)
+                  foodCollected = false
+            }
             // input()
             
              
