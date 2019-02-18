@@ -93,17 +93,16 @@
              fill(255,0,0)
             rect(poisonBerryX,poisonBerryY,10,10)
               poisonDetect()
-             if (dist(foodX,foodY,snakeX,snakeY) <= 20){
+             if (dist(foodX,foodY,snakeX,snakeY) <= 20)){
                  
                      foodCollected = true
                      length += 20
                  }
             if(dist(poisonBerryX,poisonBerryY,snakeX,snakeY <=20)){
                alert("you lost, dont eat those red berries!")
-              
+            }
         
             
-            }
              if (length == 400){
                  alert("you won!")
                  length = 20
