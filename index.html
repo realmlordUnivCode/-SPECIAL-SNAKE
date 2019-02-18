@@ -4,16 +4,7 @@
     <script src="keyboard.js"> </script>
     
     <script src="localStorageVars.js"> </script>
-    <script>
-        
-        localStorage.setItem("snakeX" , 0);
-localStorage.setItem("snakeY", 0);
-localStorage.setItem("snakeX2" , 20);
-localStorage.setItem("snakeY2" , 20);
-localStorage.setItem("length",  20);
-    localStorage.setItem("direction", "right"):
-localStorage.setItem("alive" , "true");
-    </script>
+    
 <script>
 
 var direction = localStorage.getItem("direction")
@@ -32,7 +23,7 @@ function draw() {
   background(0);
   stroke(255);
   fill(255);
-  rect(snakeX, snakeY, snakeX2, snakeY2);
+  rect("0","0", "20", "20");
   
 
 
