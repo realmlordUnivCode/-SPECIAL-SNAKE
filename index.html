@@ -58,8 +58,8 @@
         var direction = "right";
         var alive = true;
         var length = 20
-        var foodX = rand(constrain.width)
-        var foodY = rand(constrain.height)
+        var foodX = rand(constrain(inner, width))
+        var foodY = rand(constrain(inner, height))
         function setup() {
             createCanvas(window.innerWidth, window.innerHeight)
             frameRate(10);
@@ -72,6 +72,7 @@
             // input()
             /* Ensure move() is called for each draw() */
             move()
+            square(fooX,foodY,20)
         } 
     </script>
 
