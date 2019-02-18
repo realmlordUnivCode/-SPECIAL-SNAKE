@@ -6,7 +6,7 @@ var snakeX = 0;
 var snakeY = 0;
 var snakeX2 = 20;
 var snakeY2 = 20;
-var direction = "right";
+localstorage.direction = "right";
 var alive = true;
 var length = 20
 
@@ -32,54 +32,26 @@ function move() {
  function keyPressed(){
     if (keyCode == DOWN_ARROW) {
         
-            direction = "down"
+            localstorage.direction = "down"
         }
     
     if (keyCode == UP_ARROW) {
        
-direction ="up"
+localstorage.direction ="up"
         }
        
     if (keyCode == RIGHT_ARROW ) {
       
-direction = "right"
+localstorage.direction = "right"
         }
     
     if (keyCode == LEFT_ARROW) {
      
-direction = "left"
+localstorage.direction = "left"
         }
     
 }
-  /* Move this inside the brackets of move() */
-  if (direction == "up") {
-
-    snakeY = snakeY + 10
-    snakeY2 = length
-      snakeX2 = 20
   
-  }
-  if (direction == "down") {
-
-    snakeY = snakeY - 10
-    snakeY2 = length
-  snakeX2 = 20
-  }
-  
-  if (direction == "right") {
-
-      snakeX = snakeX + 10
-    snakeX2 = length
-  snakeY2 = 20
-  
-  }
-  if (direction == "left") {
-
-    snakeX = snakeX - 10
-    snakeX2 = length
-  snakeY2 = 20
- 
-  }
 }
     
 
