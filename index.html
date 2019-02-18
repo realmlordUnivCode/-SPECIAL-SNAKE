@@ -3,13 +3,8 @@
     <script src="move.js"> </script>
     <script src="keyboard.js"> </script>
 <script>
-var snakeX = 0;
-var snakeY = 0;
-var snakeX2 = 20;
-var snakeY2 = 20;
 
-var alive = true;
-var length = 20
+
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight)
@@ -21,7 +16,7 @@ function draw() {
   background(0);
   stroke(255);
   fill(255);
-  rect(localstorage.snakeX, localstorage.snakeY, localstorage.snakeX2, localstorage.snakeY2);
+  rect(localStorage.snakeX, localStorage.snakeY, localStorage.snakeX2, localStorage.snakeY2);
   input()
   /* Ensure move() is called for each draw() */
   move()
