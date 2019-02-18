@@ -62,7 +62,8 @@
        
         var foodX
         var foodY
-           
+        var poisonBerryX
+        var poisonBerryY
             
       
         
@@ -76,16 +77,19 @@
             stroke(255);
             fill(255);
             rect(snakeX, snakeY, snakeX2, snakeY2);
+           
             if (foodCollected == true){
                foodX = random(0, canvas.width - 10)
          foodY = random(0, canvas.height - 10)
-       
+       poisonBerryX = random(0,canvas.width - 10)
+       poisonBerryY = random(0,canvas.height - 10)         
             
                   foodCollected = false
             }
             // input()
             rect(foodX,foodY,10, 10)
-             
+             fill(255,0,0)
+            rect(poisonBerryX,poisonBerryY,10,10)
              if (dist(foodX,foodY,snakeX,snakeY) <= 20){
                  
                      foodCollected = true
