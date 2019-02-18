@@ -7,7 +7,7 @@ var snakeX = 0;
 var snakeY = 0;
 var snakeX2 = 20;
 var snakeY2 = 20;
-localstorage.direction = "right";
+
 var alive = true;
 var length = 20
 
@@ -21,7 +21,7 @@ function draw() {
   background(0);
   stroke(255);
   fill(255);
-  rect(snakeX, snakeY, snakeX2, snakeY2);
+  rect(localstorage.snakeX, localstorage.snakeY, localstorage.snakeX2, localstorage.snakeY2);
   input()
   /* Ensure move() is called for each draw() */
   move()
