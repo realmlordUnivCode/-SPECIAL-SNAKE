@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
 
     <script>
+       
         function move() {
             /* Move this inside the brackets of move() */
             if (direction == "up") {
@@ -64,7 +65,7 @@
         var foodY
         var poisonBerryX
         var poisonBerryY
-            
+            var poisonFrequency = 5
       
         
         
@@ -83,7 +84,12 @@
          foodY = random(0, canvas.height - 10)
        poisonBerryX = random(0,canvas.width - 10)
        poisonBerryY = random(0,canvas.height - 10)         
-            
+            if (frequency = 5)
+               var poisonBerryX2 = random(0,canvas.width)
+                var poisonBerryY2 = random(0,canvas.height)
+                fill(254)
+                rect(poisonBerryX2,poisonBerryY2,10,10)
+                fill(255)
                   foodCollected = false
             }
             // input()
@@ -95,7 +101,11 @@
                      foodCollected = true
                      length += 20
                  }
-             
+             if (length == 100){
+                 alert("you won this level!")
+                 length = 10
+                poisonFrequency = 10
+             }
             /* Ensure move() is called for each draw() */
             move()
     
