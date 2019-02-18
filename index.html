@@ -86,12 +86,12 @@
             // input()
             rect(foodX,foodY,10, 10)
              
-             if (dist(foodX,snakeX) <= 20){
-                 if (dist(foodY,snakeY) <= 20){
+             if (dist(foodX,foodY,snakeX,snakeY) <= 20){
+                 
                      foodCollected = true
                      length += 20
                  }
-             }
+             
             /* Ensure move() is called for each draw() */
             move()
     
