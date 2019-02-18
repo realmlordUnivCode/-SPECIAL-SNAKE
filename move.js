@@ -1,3 +1,5 @@
+
+while(1==1){
 /* Move this inside the brackets of move() */
   if (localstorage.direction == "up") {
 
@@ -27,3 +29,4 @@
   snakeY2 = 20
  
   }
+}
