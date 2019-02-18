@@ -29,7 +29,28 @@ function draw() {
 
 
 function move() {
-
+ function keyPressed(){
+    if (keyCode == DOWN_ARROW) {
+        
+            direction = "down"
+        }
+    
+    if (keyCode == UP_ARROW) {
+       
+direction ="up"
+        }
+       
+    if (keyCode == RIGHT_ARROW ) {
+      
+direction = "right"
+        }
+    
+    if (keyCode == LEFT_ARROW) {
+     
+direction = "left"
+        }
+    
+}
   /* Move this inside the brackets of move() */
   if (direction == "up") {
 
@@ -74,28 +95,7 @@ function move() {
         
   
    
-    function keyPressed(){
-    if (keyCode == DOWN_ARROW) {
-        
-            direction = "down"
-        }
-    
-    if (keyCode == UP_ARROW) {
-       
-direction ="up"
-        }
-       
-    if (keyCode == RIGHT_ARROW ) {
-      
-direction = "right"
-        }
-    
-    if (keyCode == LEFT_ARROW) {
-     
-direction = "left"
-        }
-    
-}
+   
     </script>
 
 </body>
