@@ -21,14 +21,14 @@ function draw() {
   stroke(255);
   fill(255);
   rect(snakeX, snakeY, snakeX2, snakeY2);
-  
+  input()
   /* Ensure move() is called for each draw() */
   move()
 }
 
 
 function move() {
-input()
+
   /* Move this inside the brackets of move() */
   if (direction == "up") {
     snakeY = snakeY + 10
@@ -61,7 +61,12 @@ input()
         
        document.onkeydown = checkKey;
 
-function checkKey(e) {
+
+   
+} 
+        
+    }
+    function checkKey(e) {
 
     e = e || window.event;
     
@@ -89,10 +94,6 @@ function checkKey(e) {
     direction = "right";
     
     };
-   
-} 
-        
-    }
     </script>
 
 </body>
