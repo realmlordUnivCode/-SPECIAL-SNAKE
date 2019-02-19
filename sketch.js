@@ -38,9 +38,9 @@ function keyPressed() {
                background(0)
                 stroke(255)
                 fill(255)
-                
-                rect(window.snakeX,window.snakeY,window.snakeLength,window.snakeHeight
-                rect(window.seg2X,window.seg2Y,window.seg2Length,window.seg2Height)
+                  rect(window.seg2X,window.seg2Y,window.seg2Length,window.seg2Height)
+                rect(window.snakeX,window.snakeY,window.snakeLength,window.snakeHeight)
+              
                 
         }
              
