@@ -64,8 +64,7 @@
       
         var foodX
         var foodY
-        var poisonBerryX
-        var poisonBerryY
+       
            
       
         
@@ -75,7 +74,7 @@
             frameRate(10);
         }
         function draw() {
-            poisonDetect()
+           
             background(0);
             stroke(255);
             fill(255);
@@ -84,8 +83,7 @@
             if (foodCollected == true){
                foodX = random(0, canvas.width - 10)
          foodY = random(0, canvas.height - 10)
-       poisonBerryX = random(0,canvas.width - 10)
-       poisonBerryY = random(0,canvas.height - 10)         
+          
          
                   foodCollected = false
             }
