@@ -20,7 +20,7 @@
         function keyPressed() {
             if (keyCode == DOWN_ARROW) {
                 window.turnDirection = "down"
-                
+                turn()
             }
             if (keyCode == UP_ARROW) {
                 window.turnDirection = "up"
@@ -28,9 +28,12 @@
             }
             if (keyCode == RIGHT_ARROW) {
                 window.turnDirection = "right"
+                turn()
             }
             if (keyCode == LEFT_ARROW) {
                 window.turnDirection = "left"
+                turn()
+            
             }
         }
         
