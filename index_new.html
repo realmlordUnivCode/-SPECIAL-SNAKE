@@ -74,7 +74,7 @@
         snakeXLength += xMovement
        seg2Length =+ seg2Shrink
        seg2Height =+seg2VertShrink  
-                rect(snakeX
+                rect(snakeX,snakeY,snakeLength,snakeHeight
                 rect(seg2X,seg2Y,seg2Length,seg2Height)
                 
         }
@@ -91,9 +91,52 @@
             seg2shrinkvert = 0
                    seg2X = snakeX
                    seg2Y = snakeY
+            snakeLength += 10 
+                   snake()
                    
-    }
-           
+    }}
+           if(direction =="left"){
+            seg2Length = length +20
+                   for(length/10-2){
+                           
+                    seg2Shrink = 10
+                           
+                           seg2ShrinVert = 0
+                           seg2X = snakeX
+                           seg2Y = snakeY
+                           snakeLength +=10
+                           snake()
+                   }}
+                          
+                   if(direction =="up"){
+                    seg2Height = length+20       
+                   for(length/10-2){
+                           
+                           seg2ShrinkVert = 10
+                           seg2Shrink =0
+                           
+                           seg2X = snakeX
+                           seg2Y = snakeY
+                           snakeHeight -=10
+                           snake()
+                   }
+                        
+                   }
+                    
+          
+                    if(direction =="down"){
+                      seg2Height = length-20
+                            for(length/10=2)
+                                    seg2ShrinkVery = -10
+                            seg2Shrink=0
+                            seg2X = snakeX
+                            seg2Y = snakeY
+                            snakeHeight -=10
+                            snake()
+                            
+                    }}
+                   
+           }
    }
     
    }
@@ -103,26 +146,30 @@
    
    if (direction == "right"){
            snakeXMove = 10
-          
+          snakeYMove = 0
+           snake()
   }
    if (direction == "left"){
-           
-    snakeXMove = -10       
+           snakeYMove = 0
+    snakeXMove = -10   
+           snake()
    }
    if (direction == "up"){
     snakeYMove = -10
-           
+           snakeXMove=0
+           snake()
            
    }
    if (direction == "down"){
-           
-    snakeYMove = 10       
+           snakeXMove = 0
+    snakeYMove = 10      
+           snake()
    }
   }      
  function draw(){
   
     
-   
+   move()
   
     
     
