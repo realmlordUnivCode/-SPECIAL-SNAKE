@@ -1,52 +1,52 @@
 function turn(){
-   if(direction == "right"){
-   seg2Length = length - 20
-           for(length/10-2){
-            seg2shrink = -10
-            seg2shrinkvert = 0
-                   seg2X = snakeX
-                   seg2Y = snakeY
-            snakeLength += 10 
+   if(window.turnDirection == "right"){
+   window.seg2Length = window.length - 20
+           for(window.length/10-2){
+            window.seg2shrink = -10
+            window.eg2shrinkvert = 0
+                   window.seg2X = window.snakeX
+                   window.seg2Y = window.snakeY
+            window.snakeLength += 10 
                    snake()
                    
     }}
-           if(direction =="left"){
-            seg2Length = length +20
-                   for(length/10-2){
+           if(window.turnDirection =="left"){
+            window.seg2Length = window.length +20
+                   for(window.length/10-2){
                            
-                    seg2Shrink = 10
+                    window.seg2Shrink = 10
                            
-                           seg2ShrinkVert = 0
-                           seg2X = snakeX
-                           seg2Y = snakeY
-                           snakeLength +=10
+                           window.seg2ShrinkVert = 0
+                           window.seg2X = snakeX
+                           window.seg2Y = snakeY
+                           window.snakeLength +=10
                            snake()
                    }}
                           
-                   if(direction =="up"){
-                    seg2Height = length+20       
-                   for(length/10-2){
+                   if(window.direction =="up"){
+                    window.seg2Height = window.length+20       
+                   for(window.length/10-2){
                            
-                           seg2ShrinkVert = 10
-                           seg2Shrink =0
+                           window.seg2ShrinkVert = 10
+                           window.seg2Shrink =0
                            
-                           seg2X = snakeX
-                           seg2Y = snakeY
-                           snakeHeight -=10
+                           window.seg2X = window.snakeX
+                           window.seg2Y = window.snakeY
+                           window.snakeHeight -=10
                            snake()
                    }
                         
                    }
                     
           
-                    if(direction =="down"){
-                      seg2Height = length-20
-                            for(length/10=2)
-                                    seg2ShrinkVert = -10
-                            seg2Shrink=0
-                            seg2X = snakeX
-                            seg2Y = snakeY
-                            snakeHeight -=10
+                    if(window.direction =="down"){
+                      window.seg2Height = window.length-20
+                            for(window.length/10=2)
+                                    window.seg2ShrinkVert = -10
+                            window.seg2Shrink=0
+                            window.seg2X = window.snakeX
+                            window.seg2Y = window.snakeY
+                            window.snakeHeight -=10
                             snake()
                             
                     }}
