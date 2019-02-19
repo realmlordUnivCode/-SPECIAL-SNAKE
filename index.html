@@ -17,22 +17,22 @@
        
         function move() {
             /* Move this inside the brackets of move() */
-            if (direction == "up") {
-                snakeY = snakeY - 10
-                snakeY2 = length
-                snakeX2 = 20
+            if (window.direction == "up") {
+                window.snakeY = snakeY - 10
+                window.snakeY2 = length
+                window.snakeX2 = 20
             }
-            if (direction == "down") {
-                snakeY = snakeY + 10
-                snakeY2 = length
-                snakeX2 = 20
+            if (window.direction == "down") {
+                window.snakeY = snakeY + 10
+                window.snakeY2 = length
+                window.snakeX2 = 20
             }
-            if (direction == "right") {
-                snakeX = snakeX + 10
-                snakeX2 = length
-                snakeY2 = 20
+            if (window.direction == "right") {
+                window.snakeX = snakeX + 10
+                window.snakeX2 = length
+                window.snakeY2 = 20
             }
-            if (direction == "left") {
+            if (window.direction == "left") {
                 snakeX = snakeX - 10
                 snakeX2 = length
                 snakeY2 = 20
@@ -40,30 +40,31 @@
         }
         function keyPressed() {
             if (keyCode == DOWN_ARROW) {
-                direction = "down"
+                window.turnDirection = "down"
                 
             }
             if (keyCode == UP_ARROW) {
-                direction = "up"
+                window.turnDirection = "up"
+                turn()
             }
             if (keyCode == RIGHT_ARROW) {
-                direction = "right"
+                window.turnDirection = "right"
             }
             if (keyCode == LEFT_ARROW) {
-                direction = "left"
+                window.turnDirection = "left"
             }
         }
-        var snakeX = 0;
-        var snakeY = 0;
-        var snakeX2 = 20;
-        var snakeY2 = 20;
-        var direction = "right";
-        var alive = true;
-        var length = 20
-      var foodCollected = true
+        var window.snakeX = 0;
+        var window.snakeY = 0;
+        var window.snakeX2 = 20;
+        var window.snakeY2 = 20;
+        var window.direction = "right";
+        var window.alive = true;
+        var window.length = 20
+      var window.foodCollected = true
       
-        var foodX
-        var foodY
+        var window.foodX
+        var window.foodY
        
            
       
@@ -78,32 +79,32 @@
             background(0);
             stroke(255);
             fill(255);
-            rect(snakeX, snakeY, snakeX2, snakeY2);
+            rect(window.snakeX, window.snakeY, window.snakeX2, window.snakeY2);
              
-            if (foodCollected == true){
-               foodX = random(0, canvas.width - 10)
-         foodY = random(0, canvas.height - 10)
+            if (window.foodCollected == true){
+               window.foodX = window.random(0,canvas.width - 10)
+         window.foodY = random(0, canvas.height - 10)
           
          
-                  foodCollected = false
+                  window.foodCollected = false
             }
             // input()
             
-            rect(foodX,foodY,10, 10)
+            rect(window.foodX,window.foodY,10, 10)
              fill(255,0,0)
            
              
-             if (dist(foodX,foodY,snakeX,snakeY) <= 20){
+             if (dist(window.foodX,window.foodY,window.snakeX,window.snakeY) <= 20){
                  
-                     foodCollected = true
-                     length += 20
+                     window.foodCollected = true
+                     window.length += 20
                  }
            
         
             
-             if (length == 400){
+             if (window.length == 400){
                  alert("you won!")
-                 length = 20
+                 window.length = 20
              
              } 
           
