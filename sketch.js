@@ -1,4 +1,4 @@
-alert("hello this works")
+
 
 function keyPressed() {
             if (keyCode == DOWN_ARROW) {
@@ -28,7 +28,21 @@ function keyPressed() {
             frameRate(10);
         }
         function draw() {
-          snake()
+          function snake(){
+          window.snakeX += window.snakeYMove
+          window.snakeY += window.snakeXMove
+        window.snakeYHeight += window.yMovement
+        window.snakeXLength += window.xMovement
+       window.seg2Length =+ window.seg2Shrink
+       window.seg2Height =+window.seg2VertShrink  
+               background(0)
+                stroke(255)
+                fill(255)
+                
+                rect(window.snakeX,window.snakeY,window.snakeLength,window.snakeHeight
+                rect(window.seg2X,window.seg2Y,window.seg2Length,window.seg2Height)
+                
+        }
              
           
             
