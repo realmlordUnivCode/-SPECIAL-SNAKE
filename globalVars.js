@@ -14,7 +14,7 @@ var window.snakeX = 0;
         var window.seg2XMovement= 0
         var window.seg2YMovement= 0
         var window.seg2Length = 0
-         var window.snakeXMove
-         var window.snakeYMove
-         var window.seg2Shrink
-         var window.seg2ShrinkVert
+         var window.snakeXMove =0
+         var window.snakeYMove=0
+         var window.seg2Shrink=0
+         var window.seg2ShrinkVert=0
