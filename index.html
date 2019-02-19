@@ -1,6 +1,5 @@
-<body> 
-   
-    
+<body>
+
     <style>
         body {
             margin: 0;
@@ -12,14 +11,49 @@
         }
     </style>
 
-   
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
-  
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
 
-   <script src = "vars.js"> </script>
-<script>
-   var snakeX = 0;
+    <script>
+       
+        function move() {
+            /* Move this inside the brackets of move() */
+            if (direction == "up") {
+                snakeY = snakeY - 10
+                snakeY2 = length
+                snakeX2 = 20
+            }
+            if (direction == "down") {
+                snakeY = snakeY + 10
+                snakeY2 = length
+                snakeX2 = 20
+            }
+            if (direction == "right") {
+                snakeX = snakeX + 10
+                snakeX2 = length
+                snakeY2 = 20
+            }
+            if (direction == "left") {
+                snakeX = snakeX - 10
+                snakeX2 = length
+                snakeY2 = 20
+            }
+        }
+        function keyPressed() {
+            if (keyCode == DOWN_ARROW) {
+                direction = "down"
+                
+            }
+            if (keyCode == UP_ARROW) {
+                direction = "up"
+            }
+            if (keyCode == RIGHT_ARROW) {
+                direction = "right"
+            }
+            if (keyCode == LEFT_ARROW) {
+                direction = "left"
+            }
+        }
+        var snakeX = 0;
         var snakeY = 0;
         var snakeX2 = 20;
         var snakeY2 = 20;
@@ -27,35 +61,71 @@
         var alive = true;
         var length = 20
       var foodCollected = true
-      
+       
         var foodX
         var foodY
-       var snakeSeg2X = 0
-        var snakeSeg2Y = 0
-        var seg2XMovement= 0
-        var seg2YMovement= 0
-        var eg2Length = 0
-         var snakeXMove =0
-         var snakeYMove=0
-         var seg2Shrink=0
-         var seg2ShrinkVert=0
-
-   
-function setup(){
-   createCanvas(window.innerWidth,window.innerHeight)
-   
-}
-   
-   function draw(){
-  
-   
-  background(0)
-                stroke(255)
+        var poisonBerryX
+        var poisonBerryY
+            var poisonFrequency
+      
+        function PoisonDetect(){
+          if(dist(poisonBerryX,poisonBerryY,snakeX,snakeY) <=20){
+               alert("you lost, dont eat those red berries!")
+               
+        var alive = false
+        alert("refresh to play again")
+            length = 0
+            snakeX=0
+            snakeY=0
+            snakeY2 = 0
+            snakeX2 = 0
+        
+        }   
+            
+        }
+        
+        function setup() {
+            createCanvas(window.innerWidth, window.innerHeight)
+            frameRate(10);
+        }
+        function draw() {
+            background(0);
+            stroke(255);
+            fill(255);
+            rect(snakeX, snakeY, snakeX2, snakeY2);
+           
+            if (foodCollected == true){
+               foodX = random(0, canvas.width - 10)
+         foodY = random(0, canvas.height - 10)
+       poisonBerryX = random(0,canvas.width - 10)
+       poisonBerryY = random(0,canvas.height - 10)         
+            if (frequency = 5)
+               var poisonBerryX2 = random(0,canvas.width)
+                var poisonBerryY2 = random(0,canvas.height)
+                fill(254)
+                rect(poisonBerryX2,poisonBerryY2,10,10)
                 fill(255)
+                  foodCollected = false
+            }
+            // input()
+            rect(foodX,foodY,10, 10)
+             fill(255,0,0)
+            rect(poisonBerryX,poisonBerryY,10,10)
+             if (dist(foodX,foodY,snakeX,snakeY) <= 20){
                  
-                rect(snakeX,snakeY,snakeLength,snakeHeight)
-   }
-   
-   
-</script>
+                     foodCollected = true
+                     length += 20
+                 }
+           
+             if (length == 100){
+                 alert("you won this level!")
+                 length = 20
+                poisonFrequency = 5
+             }
+            /* Ensure move() is called for each draw() */
+            move()
+    
+        }
+        
+    </script>
 </body>
