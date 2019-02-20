@@ -95,6 +95,11 @@
             rect(snakeX, snakeY, snakeX2, snakeY2);
             fill(254)
            rect(50,50,10,10)
+            if(dist(snakeX,snakeY,50,50) <= 20){
+                
+             alert("you Lose")   
+                
+            }
             if (foodCollected == true){
                foodX = random(0, canvas.width - 10)
          foodY = random(0, canvas.height - 10)
