@@ -116,7 +116,14 @@
                      foodCollected = true
                      length += 20
                  }
-           
+           if (dist(poisonBerryX,poisonBerryY,snakeX,snakeY)<=20){
+               
+            alert("you died")
+               
+               length = 0
+               
+               
+           }
             /* Ensure move() is called for each draw() */
             move()
     
