@@ -77,7 +77,7 @@
       
         function PoisonDetect(){
           if(dist(poisonBerryX,poisonBerryY,snakeX,snakeY) <=20){
-               alert("you lost, dont eat those red berries!")
+               alert("you lost, dont eat those red berries! ")
                
         var alive = false
         alert("refresh to play again")
@@ -94,9 +94,7 @@
         function setup() {
             createCanvas(window.innerWidth, window.innerHeight)
             frameRate(10);
-            textFont(font);
-  textSize(fontsize);
-  textAlign(LEFT, LEFT);
+            
         }
         function draw() {
             background(0);
@@ -129,7 +127,7 @@
                  }
            if (dist(poisonBerryX,poisonBerryY,snakeX,snakeY)<=20){
                
-            alert("you died")
+            alert("you died. your score was: " + score + "")
                
                length = 20
                snakeX = 0
@@ -143,7 +141,7 @@
               length = 20
                snakeX = 20
                snakeY=20
-               alert("you died")
+               alert("you died. your score was: " + score + "")
                direction = "right"
                
         }
@@ -151,7 +149,7 @@
               length = 20
                snakeX = 20
                snakeY=20
-               alert("you died")
+               alert("you died. your score was:" + score + "")
                direction = "right"
                
         }
@@ -159,7 +157,7 @@
              length = 20
                snakeX = 20
                snakeY=20
-               alert("you died")
+               alert("you died. your score was:" + score + "")
                direction = "right"
                
             
@@ -169,7 +167,7 @@
               length = 20
                snakeX = 20
                snakeY=20
-               alert("you died")
+               alert("you died. your score was:" + score + "")
                direction = "right"
                
         }   
