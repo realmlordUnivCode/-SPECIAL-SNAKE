@@ -128,8 +128,22 @@
            }
             /* Ensure move() is called for each draw() */
             move()
-    
+           if (snakeX >= canvas.width){
+              length = 20
+               snakeX = 20
+               snakeY=20
+               alert("you died")
+               direction = "right"
+               
         }
+            if (snakeY >= canvas.height){
+              length = 20
+               snakeX = 20
+               snakeY=20
+               alert("you died")
+               direction = "right"
+               
+        }}
         
     </script>
 </body>
