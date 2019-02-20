@@ -37,6 +37,7 @@
                 snakeX2 = length
                 snakeY2 = 20
             }
+        posionDetect()
         }
         function keyPressed() {
             if (keyCode == DOWN_ARROW) {
@@ -52,6 +53,7 @@
             if (keyCode == LEFT_ARROW) {
                 direction = "left"
             }
+ 
         }
         var snakeX = 0;
         var snakeY = 0;
@@ -72,13 +74,7 @@
           if(dist(poisonBerryX,poisonBerryY,snakeX,snakeY) <=20){
                alert("you lost, dont eat those red berries!")
                
-        var alive = false
-        alert("refresh to play again")
-            length = 0
-            snakeX=0
-            snakeY=0
-            snakeY2 = 0
-            snakeX2 = 0
+        
         
         }   
             
@@ -95,7 +91,7 @@
             rect(snakeX, snakeY, snakeX2, snakeY2);
             fill(254)
            rect(50,50,10,10)
-        poisonDetect()
+       
             if (foodCollected == true){
                foodX = random(0, canvas.width - 10)
          foodY = random(0, canvas.height - 10)
