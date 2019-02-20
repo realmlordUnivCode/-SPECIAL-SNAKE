@@ -17,8 +17,9 @@
         function preload() {
   // Ensure the .ttf or .otf font stored in the assets directory
   // is loaded before setup() and draw() are called
-  font = loadFont('');
+  font = loadFont('Pixel-Miners.otf');
 }
+        
        
         function move() {
             /* Move this inside the brackets of move() */
@@ -93,6 +94,9 @@
         function setup() {
             createCanvas(window.innerWidth, window.innerHeight)
             frameRate(10);
+            textFont(font);
+  textSize(fontsize);
+  textAlign(LEFT, LEFT);
         }
         function draw() {
             background(0);
