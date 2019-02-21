@@ -58,7 +58,19 @@
             if (keyCode == LEFT_ARROW) {
                 direction = "left"
             }
+      if(keyCode==191){
+       if(secretUnlocked=0){
+           
+        secretUnlocked  1   
+       }
+          
+      }
+        
         }
+        
+      
+        
+        var secretUnlocked = 0
         var obstacle1X = 60
         var obstacle1Y = 60
         var score = 0;
@@ -100,6 +112,17 @@
             
         }
         function draw() {
+            
+            
+           
+            
+            
+            
+            if(secretUnlocked == 1){
+                
+             alert("you filthy cheater!")   
+                alert(" +10000 points!")
+            }
             background(0);
             stroke(255);
             fill(255);
