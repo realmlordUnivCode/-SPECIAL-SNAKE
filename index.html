@@ -95,7 +95,7 @@
         
         function setup() {
             createCanvas(window.innerWidth, window.innerHeight)
-            frameRate(framerate);
+            frameRate(10);
             
         }
         function draw() {
@@ -106,11 +106,7 @@
             
           
             if (foodCollected == true){
-                if(framerate < 40){
-                 framerate += 10   
-                    
-                    
-                }
+               
                foodX = random(0, canvas.width - 10)
          foodY = random(0, canvas.height - 10)
        poisonBerryX = random(0,canvas.width - 10)
