@@ -20,7 +20,7 @@
   font = loadFont('Pixel-Miners.otf');
 }
         
-       
+       alert("The objective of this game is to get the highest score possible - however, this does not mean that you want to get the longest snake possible, instead there are berries littered around to shrink you - the bigger ones - so you can keep collecting points without dying.")
         function move() {
             /* Move this inside the brackets of move() */
             if (direction == "up") {
@@ -70,7 +70,8 @@
         var alive = true;
         var length = 20
       var foodCollected = true
-       
+       var shrinkX
+       var shrinkY
         var foodX
         var foodY
         var poisonBerryX
@@ -106,11 +107,12 @@
             
           
             if (foodCollected == true){
-               
-               foodX = random(0, canvas.width - 10)
-         foodY = random(0, canvas.height - 10)
-       poisonBerryX = random(0,canvas.width - 10)
-       poisonBerryY = random(0,canvas.height - 10)         
+               shrinkX = random(10, canvas.width - 20)
+                shrinkY = random(10, canvas.height - 20)
+               foodX = random(10, canvas.width - 10)
+         foodY = random(10, canvas.height - 10)
+       poisonBerryX = random(10,canvas.width - 10)
+       poisonBerryY = random(10,canvas.height - 10)         
             if (frequency = 5)
                var poisonBerryX2 = random(0,canvas.width)
                 var poisonBerryY2 = random(0,canvas.height)
@@ -123,6 +125,7 @@
             rect(foodX,foodY,10, 10)
              fill(255,0,0)
             rect(poisonBerryX,poisonBerryY,10,10)
+            rect(shrinkX,shrinkY, 20,20)
              if (dist(foodX,foodY,snakeX,snakeY) <= 20){
                  
                      foodCollected = true
@@ -139,6 +142,12 @@
                
                
            }
+            if (dist(shrinkX,shrinkY,snakeX,snakeY) <= 30) {
+             length = 0;
+                score += 1000;
+                
+                
+            }
             /* Ensure move() is called for each draw() */
             move()
            if (snakeX >= canvas.width){
