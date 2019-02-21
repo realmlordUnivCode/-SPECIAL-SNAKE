@@ -134,7 +134,7 @@
                  }
            if (dist(poisonBerryX,poisonBerryY,snakeX,snakeY)<=20){
                
-            alert("you died. your score was: " + score + "")
+            alert("you died. your score was: " + score + " dont eat the red berries!")
                
                length = 20
                snakeX = 0
@@ -143,9 +143,9 @@
                
            }
             if (dist(shrinkX,shrinkY,snakeX,snakeY) <= 30) {
-             length = 0;
+             length = 20;
                 score += 1000;
-                
+             alert("you shrunk!")
                 
             }
             /* Ensure move() is called for each draw() */
