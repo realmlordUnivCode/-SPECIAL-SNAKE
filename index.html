@@ -147,7 +147,7 @@
                length = 20
                snakeX = 0
                snakeY = 0
-               
+               score = 0
                
            }
             if (dist(shrinkX,shrinkY,snakeX,snakeY) <= 30) {
@@ -165,7 +165,7 @@
                snakeY=20
                alert("you died. your score was: " + score + "")
                direction = "right"
-               
+               score = 0
         }
             if (snakeY >= canvas.height){
               length = 20
@@ -173,6 +173,7 @@
                snakeY=20
                alert("you died. your score was:" + score + "")
                direction = "right"
+                score = 0
                
         }
         if (snakeX < 0) {
@@ -181,7 +182,7 @@
                snakeY=20
                alert("you died. your score was:" + score + "")
                direction = "right"
-               
+               score = 0
             
         }
          if(snakeY < 0) {
@@ -191,7 +192,7 @@
                snakeY=20
                alert("you died. your score was:" + score + "")
                direction = "right"
-               
+               score = 0
         }   
             
             
