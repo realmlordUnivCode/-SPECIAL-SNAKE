@@ -25,6 +25,7 @@
         var moves
 var length = 20
         
+        var lengthSecret = false
         
         
         
@@ -213,7 +214,12 @@ var length = 20
         }   
             
             
+        if(length == 30000){
+         alert("congrats, you found my secret, your score will now go up by a million!")
+            score += 1000000
+            length = 20
             
+        }
             
         }
     </script>
