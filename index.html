@@ -14,24 +14,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
 
     <script>
-        function preload() {
-  // Ensure the .ttf or .otf font stored in the assets directory
-  // is loaded before setup() and draw() are called
-  font = loadFont('Pixel-Miners.otf');
-}
+        
+        
+        var segXname = "0"
+        var segYname = "0"
+        
+        var segX 
+        var segY
         var segmentNumber = length/20
         var moves
 var length = 20
-        var prevSegmentY
-        var prevSegmentX
-        var prevSegmentLength
-        function left(){
-         for (segmentNumber){   
-          moves += 1
-             
-         }
-            
-        }
+        
         
         
         
@@ -61,7 +54,6 @@ var length = 20
         }
         function keyPressed() {
             if (keyCode == DOWN_ARROW) {
-                turn()
                 direction = "down"
                 
                 
@@ -69,17 +61,14 @@ var length = 20
             }
             if (keyCode == UP_ARROW) {
                
-                turn()
                 direction = "up"
             }
             if (keyCode == RIGHT_ARROW) {
-                turn()
                 
                 direction = "right"
             }
             if (keyCode == LEFT_ARROW) {
               
-                turn()
                 direction = "left"
             }
     
@@ -120,7 +109,7 @@ var length = 20
             snakeY=0
             snakeY2 = 0
             snakeX2 = 0
-        var framerate = 10
+        
         }   
             
         }
@@ -175,15 +164,19 @@ var length = 20
                
            }
             if (dist(shrinkX,shrinkY,snakeX,snakeY) <= 30) {
-            foodCollected = true;
+                
                 if(length == 20){
+                 alert("you died, maybe next time dont shrink out of existance? your score was " + score)   
                  score = 0
-                   alert("you died, maybe next time you should try not to shrink out of existence?You had a score of " + score +"") 
-                    snakeX = 0
+                  snakeX = 0
                     snakeY = 0
-                    
                 }
-                    moves += 1
+            foodCollected = true;
+                length += 10
+                length= 20
+                
+            
+                
             }
             /* Ensure move() is called for each draw() */
             move()
