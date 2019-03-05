@@ -54,7 +54,7 @@ var length = 20
         }
         function keyPressed() {
             if (keyCode == DOWN_ARROW) {
-                turn()
+
                 direction = "down"
                 
                 
@@ -62,17 +62,17 @@ var length = 20
             }
             if (keyCode == UP_ARROW) {
                
-                turn()
+
                 direction = "up"
             }
             if (keyCode == RIGHT_ARROW) {
-                turn()
+
                 
                 direction = "right"
             }
             if (keyCode == LEFT_ARROW) {
               
-                turn()
+
                 direction = "left"
             }
     
@@ -113,7 +113,7 @@ var length = 20
             snakeY=0
             snakeY2 = 0
             snakeX2 = 0
-        var framerate = 10
+        
         }   
             
         }
@@ -170,7 +170,7 @@ var length = 20
             if (dist(shrinkX,shrinkY,snakeX,snakeY) <= 30) {
                 
                 if(length == 20){
-                 alert("you died, maybe next time dont shrink out of existance? your score was " + score + "")   
+                 alert("you died, maybe next time dont shrink out of existance? your score was " + score)   
                  score = 0
                   snakeX = 0
                     snakeY = 0
