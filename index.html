@@ -32,7 +32,7 @@ var length = 20
          }
             
         }
-        
+        var shrinkTrue
         
         
        alert("The objective of this game is to get the highest score possible - however, this does not mean that you want to get the longest snake possible, instead there are berries littered around to shrink you - the bigger ones - so you can keep collecting points without dying.")
@@ -132,7 +132,12 @@ var length = 20
         }
         function draw() {
             
-            
+            if(shrinkTrue = true){
+             length = 20;
+                score += 1000;
+             alert("you shrunk!")
+                       
+            }
            
             
             
@@ -175,19 +180,17 @@ var length = 20
                
            }
             if (dist(shrinkX,shrinkY,snakeX,snakeY) <= 30) {
-            foodCollected = true;
+           shrinkTrue = true
+                foodCollected = true;
                 if(length == 20){
                  score = 0
                    alert("you died, maybe next time you should try not to shrink out of existence?You had a score of " + score + "") 
                     snakeX = 0
                     snakeY = 0
-                    
+                    shrinkTrue = false
                 }
-                    if (lengtgh != 20) {
-                length = 20;
-                score += 1000;
-             alert("you shrunk!")
-                    }
+
+                
             }
             /* Ensure move() is called for each draw() */
             move()
