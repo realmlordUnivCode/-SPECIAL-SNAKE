@@ -176,6 +176,14 @@ var length = 20
            }
             if (dist(shrinkX,shrinkY,snakeX,snakeY) <= 30) {
             foodCollected = true;
+                if(length == 20){
+                 score = 0
+                   alert("you died, maybe next time you should try not to shrink out of existence?You had a score of " + score + "") 
+                    snakeX = 0
+                    snakeY = 0
+                    
+                }
+                    
                 length = 20;
                 score += 1000;
              alert("you shrunk!")
