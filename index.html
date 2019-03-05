@@ -73,7 +73,13 @@ var length = 20
                 direction = "left"
             }
     
-      
+      if(keyCode == 191){
+       alert("You dirty cheater!!!")
+          
+          length = 100000000
+          score = -10000
+          
+      }
         
         }
         
@@ -152,7 +158,7 @@ var length = 20
                  
                      foodCollected = true
                      length += 20
-                 score += 150
+                 score += 159
                  }
            if (dist(poisonBerryX,poisonBerryY,snakeX,snakeY)<=20){
                
@@ -214,7 +220,7 @@ var length = 20
         }   
             
             
-        if(length == 30000){
+        if(length == 3000){
          alert("congrats, you found my secret, your score will now go up by a million!")
             score += 1000000
             length = 20
