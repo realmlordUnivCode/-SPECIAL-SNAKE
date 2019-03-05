@@ -165,18 +165,13 @@ var length = 20
            }
             if (dist(shrinkX,shrinkY,snakeX,snakeY) <= 30) {
                 
-                if(length == 20){
-                 alert("you died, maybe next time dont shrink out of existance? your score was " + score)   
+                if(length <= 20){
+                 alert("you died, maybe next time dont shrink out of existance? your score was " + score + ".")   
                  score = 0
                   snakeX = 0
                     snakeY = 0
                 }
-            foodCollected = true;
-                length += 10
-                length= 20
-                
-            
-                
+            foodCollected = true; 
             }
             /* Ensure move() is called for each draw() */
             move()
