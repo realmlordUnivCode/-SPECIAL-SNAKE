@@ -169,6 +169,7 @@ var length = 20
             if(dist(specFoodX,specFoodY,snakeX,snakeY) <=20){
              specialFoods += 1
                 localStorage.setItem("specFoods", specialFoods)
+                foodCollected = true
                 
             }
              if (dist(foodX,foodY,snakeX,snakeY) <= 20){
