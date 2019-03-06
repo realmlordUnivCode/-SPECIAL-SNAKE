@@ -14,7 +14,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
 
     <script>
-
+        
+var specialFoods = localStorage.getItem("specFoods")
+if (specialFoods = null){
+specialFoods = localStorage.setItem("specFoods","0")   
+    
+}
+        var specFoodX
         
         var segXname = "0"
         var segYname = "0"
@@ -148,12 +154,22 @@ var length = 20
        poisonBerryX = random(10,canvas.width - 10)
        poisonBerryY = random(10,canvas.height - 10)         
            foodCollected = false
+                specFoodX = random(10,canvas.width - 10)
+                specFoodY = random(10,canvas.height - 10)
+             
             }
             // input()
             rect(foodX,foodY,10, 10)
              fill(255,0,0)
             rect(poisonBerryX,poisonBerryY,10,10)
             rect(shrinkX,shrinkY, 20,20)
+            fill(255)
+            rect(specFoodX,specFoodY,20,20)
+            if(dist(specFoodX,specFoodY,snakeX,snakeY) <=20){
+             specialFoods += 1
+                localStorage.setItem("specFoods", specialFoods)
+                
+            }
              if (dist(foodX,foodY,snakeX,snakeY) <= 20){
                  
                      foodCollected = true
