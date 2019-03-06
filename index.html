@@ -17,8 +17,8 @@
         
 var specialFoods = localStorage.getItem("specFoods")
 if (specialFoods == null){
-    specialFoods = 0
-specialFoods = localStorage.setItem("specFoods",specialFoods)   
+    specialFoodsNum = 0
+specialFoods = localStorage.setItem("specFoods",specialFoodsNum)   
     var specFoodY
 }
         var specFoodX
@@ -168,8 +168,8 @@ var length = 20
             fill(255)
             rect(specFoodX,specFoodY,20,20)
             if(dist(specFoodX,specFoodY,snakeX,snakeY) <=20){
-             specialFoods += 1
-                localStorage.setItem("specFoods", specialFoods)
+             specialFoodsNum += 1
+                localStorage.setItem("specFoods", specialFoodsNum)
                 foodCollected = true
                 
             }
