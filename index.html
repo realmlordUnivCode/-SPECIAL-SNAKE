@@ -17,7 +17,8 @@
         
 var specialFoods = localStorage.getItem("specFoods")
 if (specialFoods == null){
-specialFoods = localStorage.setItem("specFoods",0)   
+    specialFoods = 0
+specialFoods = localStorage.setItem("specFoods",specialFoods)   
     var specFoodY
 }
         var specFoodX
