@@ -98,7 +98,17 @@ var length = 20
           
       }
            
+           if(keyCode == "KeyQ" && specialFoodsNum >=20){
+                 
+
+             specialFoodsNum -=20
+             specialFoods = specialFoodsNum
+              foodScoreNum +=20
+                localStorage.setItem("foodScore",foodScoreNum)
                 
+             localStorage.setItem("specFoods",specialFoodsNum)   
+                
+   
                 
                 
                  
@@ -110,25 +120,10 @@ var length = 20
         }
         
       function key(event){
-      var key = event.key
+
           
-          if(key == "s" || key == "S"){
-             alert("Press Q to buy food score upgrades for 20 special foods!, press E to buy   
-                
-                
-                
-            }
-                   if(key == "q" || key == "Q"){
-                 
-            if(specialFoodsNum >= 20){
-             specialFoodsNum -=20
-             specialFoods = specialFoodsNum
-              foodScoreNum +=20
-                localStorage.setItem("foodScore",foodScoreNum)
-                
-             localStorage.setItem("specFoods",specialFoodsNum)   
-                
-            }   
+          
+                  
           
           
       }
