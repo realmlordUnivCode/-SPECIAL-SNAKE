@@ -14,7 +14,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
 
     <script>
-        
+        var foodScore = localStorage.getItem("foodScore")
+                var foodScoreNum
+        if(foodScore == null){
+         foodScoreNum = 150
+         foodScore = foodScoreNum
+            localStorage.setItem("foodScore",foodScore)
+            
+        }
+
 var specialFoods = localStorage.getItem("specFoods")
 
 if (specialFoods == null){
@@ -91,6 +99,31 @@ var length = 20
           score -= -1000000
           
       }
+            if(keyCodde == KeyS){
+             alert("Press Q to buy food score upgrades for 20 special foods!, press E to buy   
+                
+                
+                
+            }
+                   if(keyCode == KeyQ){
+                 
+            if(specialFoodsNum >= 20){
+             specialFoodsNum -=20
+             specialFoods = specialFoodsNum
+              foodScoreNum +=20
+                localStorage.setItem("foodScore",foodScoreNum)
+                
+             localStorage.setItem("specFoods",specialFoodsNum)   
+                
+            }
+                
+                
+                
+                 
+             }
+                
+                
+                
         
         }
         
@@ -180,7 +213,7 @@ var length = 20
                  
                      foodCollected = true
                      length += 20
-                 score += 159
+                 score += foodScore
                  }
            if (dist(poisonBerryX,poisonBerryY,snakeX,snakeY)<=20){
                
