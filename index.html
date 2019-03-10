@@ -16,13 +16,13 @@
     <script>
         var foodScore = localStorage.getItem("foodScore")
                 var foodScoreNum
-        if(foodScore == null){
+        if(foodScoreNum == null){
          foodScoreNum = 150
          foodScore = foodScoreNum
-            localStorage.setItem("foodScore",foodScore)
+
             
         }
-
+   localStorage.setItem("foodScore",foodScore)
 var specialFoods = localStorage.getItem("specFoods")
 
 if (specialFoods == null){
@@ -168,6 +168,8 @@ var length = 20
         function setup() {
             createCanvas(window.innerWidth, window.innerHeight)
             frameRate(40);
+            background(0);
+         
             
         }
         function draw() {
