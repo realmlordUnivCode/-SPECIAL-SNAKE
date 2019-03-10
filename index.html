@@ -15,13 +15,9 @@
 
     <script>
         var foodScore = localStorage.getItem("foodScore")
-                var foodScoreNum
-        if(foodScoreNum == null){
-         foodScoreNum = 150
-         foodScore = foodScoreNum
-
-            
-        }
+                
+       
+        
    localStorage.setItem("foodScore",foodScore)
 var specialFoods = localStorage.getItem("specFoods")
 
@@ -29,6 +25,8 @@ if (specialFoods == null){
     specialFoodsNum = 0
 specialFoods = localStorage.setItem("specFoods",specialFoodsNum)   
     var specFoodY
+    foodScoreNum = 150
+    localstorage.setItem("foodScore",foodScoreNum"
 }
         var foodies = Number(specialFoods)
         specialFoodsNum = foodies
