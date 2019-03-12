@@ -28,6 +28,11 @@ specialFoods = localStorage.setItem("specFoods",specialFoodsNum)
     foodScoreNum = 150
     localstorage.setItem("foodScore",foodScoreNum)
 }
+        if(speicalFoods >= 20){
+         foodScore += 150   
+            
+        }
+            
         var foodies = Number(specialFoods)
         specialFoodsNum = foodies
         var specFoodX
@@ -228,6 +233,7 @@ var length = 20
                 }
             foodCollected = true; 
                 length = 20
+                score +=1000
             }
             /* Ensure move() is called for each draw() */
             move()
