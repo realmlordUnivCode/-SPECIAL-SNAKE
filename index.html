@@ -28,10 +28,11 @@ specialFoods = localStorage.setItem("specFoods",specialFoodsNum)
     foodScoreNum = 150
     localstorage.setItem("foodScore",foodScoreNum)
 }
-        if(speicalFoods >= 20){
-         foodScore += 150   
-            
-        }
+        
+      var  foodScoreMultiplier = specialFoodsNum/20
+      var foodScore = 150*foodScoreMultiplier
+        
+        
             
         var foodies = Number(specialFoods)
         specialFoodsNum = foodies
